@@ -14,7 +14,10 @@ An copy of the [home page](lcmodel.html) as well as the
 # Compilation
 
 With a modern gfortran installed, compilation can be performed with:
-  `gfortran -ffpe-summary=none -std=legacy -O3 LCModel.f -o lcmodel`
+
+```
+gfortran -ffpe-summary=none -std=legacy -O3 LCModel.f -o lcmodel
+```
 
 # 64-bit linux binaries
 
