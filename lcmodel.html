@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>LCModel's home page</title>
+
+<style type="text/css">
+ body{
+  margin:10;
+  padding:10px 0 0 150px;
+  padding:0 0 0 175px;
+  background:#ccc;
+  background:#e0ffff;
+ }
+ div#left-sidebar{
+  position:absolute;
+  top:10px;
+  left:0;
+  width:175px;
+  background:#ccc;
+  background:#e0ffff;
+  color: #000;
+ }
+ div#content{
+  background:#fff;
+ }
+ @media screen{
+  body>div#left-sidebar{
+   position:fixed;
+  }
+ }
+ * html body{
+  overflow:hidden;
+ }
+ * html div#content{
+  height:100%;
+  overflow:auto;
+ }
+</style>
+
+</head>
+
+<body>
+<div id="left-sidebar">
+ <ul>
+ <li><a href="lcmodel.shtml">LCModel home</a></li><br>
+ <hr>
+ <li><a href="one-page.shtml">brain</a></li>
+ <li><a href="fig-weak-naa.shtml">brain tumor</a></li>
+ <li><a href="fig-strong-lipid.shtml">brain + lipids</a></li>
+ <li><a href="fig-lipid-1.shtml">bone</a></li>
+ <li><a href="fig-breast-1.shtml">breast</a></li>
+ <li><a href="fig-liver-1.shtml">liver</a></li>
+ <li><a href="fig-muscle.shtml">muscle</a></li>
+ <li><a href="fig-mega.shtml">MEGA-PRESS</a></li><br>
+ <hr>
+ <li><a href="lcm-test.shtml">free download</a></li>
+ <li><a href="lcm-license.shtml">license</a></li>
+ <li><a href="lcm-applications.shtml">early applications</a></li>
+ <li><a href="file-selector.shtml">analysis Step 1</a></li>
+ <li><a href="control-parameters.shtml">analysis Step 2</a></li>
+ <li><a href="lcm-manual.shtml">user manual</a></li>
+ <li><a href="asia.shtml">Japan and China</a></li>
+ </ul>
+</div>
+
+
+<div id="content">
+
+<CENTER><H1>LCModel</H1></CENTER>
+
+<H3>Application:</H3>
+<UL>
+   <LI>Automatic quantification of <I>in vivo</I> proton MR spectra.</LI> 
+<BR>
+   <LI>Some very early user applications of LCModel can be seen in the 
+<A HREF="lcm-applications.shtml">sample publications list</A>.</LI>
+</UL>
+<BR>
+<BR>
+<H3><b><font color="#FF0000">News:</font></b></H3>
+Stephen Provencher is no longer available.  LCModel is now free software.  You
+can use it by entering (the first time only) the command:
+<pre><CODE>  touch  $HOME/.lcmodel/license </CODE></pre>
+and for each analysis the following in Figure 7.7 of the
+<A HREF="lcm-manual.shtml">User's Manual</A>:
+<pre><CODE>  key = 210387309</CODE></pre>
+Optionally, you can also enter:
+<pre><CODE>  owner = 'your group and laboratory name'</CODE></pre>
+<BR>
+Two other things you need are:
+<UL>
+<LI> Input data in LCModel RAW format, as specified in Chapter 5 of the
+<A HREF="lcm-manual.shtml">User's Manual</A>, can also be made using tools on
+the Internet or (for older data) using the recommended
+LCMgui GUI decribed below.
+<BR>
+<BR>
+  <LI> Only for brain:
+    Basis sets of  <A HREF="lcm-basis.shtml">model metabolite spectra</A>.
+    (See Sections 9.2 and 9.3 of the manual for other organs.)
+  </UL>
+  <BR>
+    <BR>
+      There is a <A HREF="pub/LCModel/LCModel.exe.zip">Windows version</A>, but
+  without the GUI; you use Chapter 5 of the  <A HREF="lcm-manual.shtml">User's
+	Manual</A>
+      <BR>
+	<BR>
+	  The <A HREF="pub/LCModel/source.zip">source code</A>  worked with the
+		 Intel Windows
+       Fortran compiler IFORT.  For other compilers, you will probably have to
+       find a substitute for FDATE, which returns the time and date.  For
+		 Linux, there is a <A HREF="pub/LCModel/Makefile">sample
+		 Makefile</A>. 
+	  <BR>
+	  <BR>
+<H3><b><font color="#FF0000">Please note:</font></b></H3> Much of the rest of
+  this website has not been updated since
+  LCModel became free software.
+<BR>
+<BR>
+<H3>Download, Install & Test:</H3>
+<UL>
+   <LI>You can freely download the complete <A 
+HREF="lcm-test.shtml">LCMgui/LCModel package</A> for your Linux PC.  (The two 
+commands needed for
+installation and the run with the test data are also specified.)  You can also
+test the preparation and input of your own data to LCModel.
+</UL>
+<BR>
+<H3>Past News:</H3>
+LCModel Version 6.3.
+<UL>
+<LI> Estimation of GABA with <A HREF="fig-mega.shtml">MEGA-PRESS</A>.
+<BR>
+<BR>
+<LI> Improved estimation of weaker metabolites, especially glutamine.
+<BR>
+<BR>
+<LI> Improved analyses of muscle, lipid, breast and liver spectra.
+</UL>
+<BR>
+LCModel Version 6.2.  While the main
+application remains <A HREF="one-page.shtml">brain</A>, options have been 
+added for more primitive spectra:
+<UL>
+   <LI> Mainly water & lipids, as in fat and 
+<A HREF="fig-lipid-1.shtml">bone</A>.
+<BR>
+<BR>
+   <LI> Water & lipids plus possibly choline, as in 
+<A HREF="fig-breast-1.shtml">breast</A> and 
+<A HREF="fig-liver-1.shtml">liver</A>.
+<BR>
+<BR>
+    <LI>LCModel Version 6.1 with new 
+options, including analysis of <A HREF="fig-muscle.shtml">muscle spectra</A>,
+particularly for IMCL.
+<BR>
+<BR>
+    <LI>A Linux version for PCs (with Intel or AMD processors) is 
+now available.  It is much faster than UNIX, with an excellent hardware 
+performance/price ratio, particularly interesting for MRSI.
+<BR>
+<BR>
+   <LI>Major new LCModel Version 6 
+	with many new features, including:
+<BR>
+<BR>
+   <LI>Estimates of macromolecule and lipid contributions in <A
+   HREF="one-page.shtml">normals</A> and in pathologies (e.g., tumors) <A
+   HREF="fig-strong-lipid.shtml">with strong lipid</A> signals and <A
+   HREF="fig-weak-naa.shtml">without strong lipid</A> signals.
+<BR>
+<BR>
+   <LI>Analyses of full 2D slices or rectangular 2D subsets of 2D or 3D MRSI
+   data sets.
+<BR>
+<BR>
+</UL>
+
+<H3>Features:</H3>
+<UL>
+   <LI>Fully automatic, non-interactive, operator-independent: time-domain
+	data input, <A HREF="one-page.shtml">one-page summary</A> output.
+<BR>
+<BR>
+   <LI>Fully developed, over 29 years, with spectra analyzed from a wide
+   variety of scanners and field strengths at more than 1000 sites.</LI>
+<BR>
+<BR>
+</UL>
+
+
+<H3>Methods are described in:</H3>
+<UL>
+   <LI>Stephen Provencher: Estimation of metabolite concentrations from localized 
+<I>in vivo</I> proton NMR spectra. <I>Magn Reson Med</I>
+<STRONG>30</STRONG>, 672 (1993).</LI> 
+<BR>
+   <LI><A HREF="lcm-manual.shtml">User's Manual</A> (you can always get the 
+latest version here).</LI>
+</UL>
+<BR>
+<BR>
+<H3>LCMgui Graphical User Interface</H3>
+The normal usage is to supply the time-domain data as a simple text
+   file to LCModel.  A possible alternative is the LCMgui graphical user
+   interface:
+      <UL>
+	  <LI> Freely available for use with LCModel.
+<BR>
+<BR>
+	  <LI>Simplified usage, often only with mouse clicks, in two steps: 
+              <OL> 
+                 <LI> Select the data with the <A
+                 HREF="file-selector.shtml">File Selector</A>;
+<BR>
+                 <LI> Start LCModel (optionally checking and modifying any
+                 settings) in the <A HREF="control-parameters.shtml">Control
+                 Window.</A></LI>
+               </OL>
+<BR>
+	  <LI> Currently for the following (older) single-voxel data:
+	  <UL>
+	    <LI>Bruker <CODE>fid</CODE> files.
+	      <BR>
+	    <LI>GE 5.x Probe raw P-files and spectrum G-files.
+	      <BR>
+	    <LI>GE Probe raw P-files. 
+             Also for P-files with multi-channel (phased-array) data.
+	      <BR>
+		<LI>Hitachi data: LCModel is
+		  part of the Hitachi software; no need to use
+            LCMgui.             
+              <BR>
+	    <LI>Philips SDAT/SPAR pairs and enhanced DICOM files.
+	      <BR>
+	    <LI>Picker (later Marconi, now Philips) DUMP files.
+	      <BR>
+	    <LI> Siemens *rda files transferred from the syngo PC 
+                 console and 
+                 Siemens raw files from the (old) Numaris-3 Unix console.
+	      <BR>
+	    <LI>Toshiba rawData files and 
+                Version 7.xx (and later) DICOM files.
+	      <BR>
+	    <LI>Varian/Agilent <CODE>fid</CODE> files.
+	      <BR>
+	    <LI>Other data types using your own conversion script.
+	  </UL>
+<BR>
+	<LI>Currently for the following MRSI data:
+	  <UL>
+
+	    <LI>Philips, Siemens & Toshiba single-channel data,
+including interactive display, selection and analysis of full 2D slices or
+rectangular subsets.  (Instructions in Sections 3.2 & 3.7 of the <A
+HREF="lcm-manual.shtml">LCModel Manual</A>.) <BR>
+
+	    <LI>Other data types using your own conversion script;
+	      <BR>
+	    <LI><A NAME="sage"> </A>For GE MRSI (and single-voxel) data, Mary
+	    McLean's SAGE/LCModel interface [MA McLean <I>et al, Magn Reson 
+		Med</I>
+	    <STRONG>44,</STRONG> 401 (2000)] is integrated into GE's SAGE
+            Research version (from SAGE Dev2002.1).
+	      <BR>
+      </UL>
+    </UL>
+<BR>
+
+<HR>
+<BR>
+To <A HREF="../index.shtml">Inverse Problems home page</A> <BR>
+</DIV>
+</BODY>
+</HTML>
