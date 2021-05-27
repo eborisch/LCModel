@@ -5,7 +5,7 @@ ifeq (default,$(origin FC))
 FC = gfortran
 endif
 
-FFLAGS +=	-ffpe-summary=none -std=legacy -O3
+FFLAGS += -ffpe-summary=none -std=legacy -O3
 
 .PHONY: clean default
 
