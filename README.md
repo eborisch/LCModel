@@ -16,8 +16,12 @@ An copy of the [home page](lcmodel.html) as well as the
 With a modern gfortran installed, compilation can be performed with:
 
 ```
-gfortran -ffpe-summary=none -std=legacy -O3 LCModel.f -o lcmodel
+gfortran -ffpe-summary=none -std=legacy -O3 LCModel.f -o LCModel
 ```
+
+A simple Makefile has been provided, such that `make` will build LCModel as
+shown above. Using `make FC=<fortran compiler>` will use the specified compiler
+rather than `gfortran`.
 
 # 64-bit linux binaries
 
