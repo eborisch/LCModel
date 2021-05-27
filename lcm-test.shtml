@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>LCModel package</title>
+
+<style type="text/css">
+ body{
+  margin:10;
+  padding:10px 0 0 150px;
+  padding:0 0 0 175px;
+  background:#ccc;
+  background:#e0ffff;
+ }
+ div#left-sidebar{
+  position:absolute;
+  top:10px;
+  left:0;
+  width:175px;
+  background:#ccc;
+  background:#e0ffff;
+  color: #000;
+ }
+ div#content{
+  background:#fff;
+ }
+ @media screen{
+  body>div#left-sidebar{
+   position:fixed;
+  }
+ }
+ * html body{
+  overflow:hidden;
+ }
+ * html div#content{
+  height:100%;
+  overflow:auto;
+ }
+</style>
+
+</head>
+
+<body>
+<div id="left-sidebar">
+ <ul>
+ <li><a href="lcmodel.shtml">LCModel home</a></li><br>
+ <hr>
+ <li><a href="one-page.shtml">brain</a></li>
+ <li><a href="fig-weak-naa.shtml">brain tumor</a></li>
+ <li><a href="fig-strong-lipid.shtml">brain + lipids</a></li>
+ <li><a href="fig-lipid-1.shtml">bone</a></li>
+ <li><a href="fig-breast-1.shtml">breast</a></li>
+ <li><a href="fig-liver-1.shtml">liver</a></li>
+ <li><a href="fig-muscle.shtml">muscle</a></li>
+ <li><a href="fig-mega.shtml">MEGA-PRESS</a></li><br>
+ <hr>
+ <li><a href="lcm-test.shtml">free download</a></li>
+ <li><a href="lcm-license.shtml">license</a></li>
+ <li><a href="lcm-applications.shtml">early applications</a></li>
+ <li><a href="file-selector.shtml">analysis Step 1</a></li>
+ <li><a href="control-parameters.shtml">analysis Step 2</a></li>
+ <li><a href="lcm-manual.shtml">user manual</a></li>
+ <li><a href="asia.shtml">Japan and China</a></li>
+ </ul>
+</div>
+
+
+<div id="content">
+
+<CENTER><H2>Installing & Testing the LCModel package</H2></CENTER> 
+<FONT SIZE="3">
+<A HREF="#requirements">Requirements</A>
+<BR>
+<A HREF="#installation">Installation and test run</A>
+<BR>
+<A HREF="#documentation">Documentation</A>
+<BR>
+<A HREF="#further">Analyzing your data</A>
+<BR>
+<A HREF="#details">Further comments on computers</A>
+<BR>
+<BR>
+<HR>
+<A NAME="requirements"> </A>
+<H3>Requirements:</H3>
+<UL>
+   <LI>A Linux PC with an AMD or Intel processor(s) (including x86-64).  No 
+Microsoft or Apple versions are planned. 
+<A HREF="#details"> Further comments</A> are below.
+	<BR>
+	<BR>
+      <LI>You must be able to print or display <STRONG>PostScript</STRONG>
+      files (or convert PostScript, e.g., to PDF with Adobe Acrobat
+      Distiller).
+	<BR>
+	<BR>
+      <LI>An X-windows display.  (This is checked for
+   you in Step 2 of the test run below.)  
+	<BR>
+	<BR>
+      <LI>A monitor with reasonable resolution (at least 1024 x 768).
+	<BR>
+	<BR>
+      <LI>The installation is very simple, even for non-experts:
+      <UL>
+	<BR>
+         <LI>You log on under your normal username (<STRONG>not</STRONG> 
+             <CODE>root</CODE>);
+	<BR>
+	<BR>
+         <LI>And you can at any time completely remove your installed package 
+         (including all output from the tests) with the command:<BR>
+          <CODE>   $HOME/.uninstall-lcmodel</CODE>
+      </UL>
+</UL>
+<A HREF="#top">Back to top of page</a>
+<HR>
+<A NAME="installation"> </A>
+<H3>Free installation and test run:</H3>
+<OL>
+    <LI><STRONG>Download</STRONG> 
+<BR>
+<BR>
+<A HREF="pub/LCModel/programs/lcm-64.tar">
+<CODE>lcm-64.tar</CODE></A> ( 11Mbyte) (for most 64-bit systems)
+<BR>
+or 
+<BR>
+<A HREF="pub/LCModel/programs/lcm-32.tar">
+<CODE>lcm-32.tar</CODE></A> (7.4Mbyte) (for 32-bit and 64-bit systems)
+<BR>
+<BR>
+If you are unsure, download and install <CODE>lcm-64.tar</CODE>.  If you 
+quickly get an error 
+message like "No such file or directory" or 
+"Cannot execute binary file" or "Kernel too old" 
+during installation, then uninstall with <CODE>$HOME/.uninstall-lcmodel</CODE>
+and then download and 
+install <CODE>lcm-32.tar</CODE>.
+<BR>
+<BR>
+    <LI>Open a terminal and <STRONG>install and test</STRONG> the package with
+    the two commands: 
+<pre><CODE>   tar xf lcm-??.tar
+   ./install-lcmodel</CODE></pre>
+     where ?? is 64 or 32.  Note that the last command starts with a dot.
+<BR>
+<BR>
+     (If you get an error message about not
+being able to open or connect to your display, then click <A
+HREF="lcm-test-x.shtml">here</A>.)
+<BR>
+Chapter 4 of the <A HREF="lcm-manual.shtml">User's Manual</A> has more
+information on installation and displaying the results.
+<BR>
+<BR>
+
+     <LI>Your test-run results should be similar to PLOTs 1-4 in the
+     documentation (and fairly similar to the 
+<A HREF="one-page.shtml">2007 result</A>).
+</OL>
+<A HREF="#top">Back to top of page</a>
+<HR>
+<A NAME="documentation"> </A>
+<H3>Documentation</H3>
+
+     The User's Manual (in <CODE>$HOME/.lcmodel/doc/manual.pdf</CODE>) is a
+     full reference manual (184 pages), and most users only need to read
+     a small part of it (as outlined in the overview in Section 1.1).  Chapter 4
+     explains the test runs in detail.  Also print out
+     <CODE>$HOME/.lcmodel/doc/figures.pdf</CODE> (29 pages), and bind it
+     separately from the manual.  If possible, print both in duplex mode (both
+     sides of a sheet).
+<BR>
+<BR>
+<A HREF="#top">Back to top of page</a>
+<HR>
+<A NAME="further"> </A>
+<H3>Analyzing your data</H3>
+ To start a new LCMgui session, you enter 
+<PRE><CODE>   cd $HOME/.lcmodel
+   ./lcmgui</CODE></PRE>
+
+(Note that the last command starts with a dot.  Section 7.2.2 of
+the manual specifies how 
+you can easily reduce these two commands to simply <CODE>lcmgui</CODE>.)
+<BR>
+  
+Follow the steps in LCMgui to select your file to be analyzed.<BR>
+<BR>
+<A HREF="#top">Back to top of page</a>
+<HR>
+<H3>Further comments on computers</H3>
+<UL>
+
+    <LI>An LCModel analysis makes full use of one processor's speed and 
+    CPU cache memory.
+    It makes no use of multiple processors (unless several analyses run
+    simultaneously). 
+<BR>
+<BR>
+
+    <LI>There is very little input/output or demands on graphics, memory or
+    disk storage.
+<BR>
+<BR>
+
+    <LI>512 MB of memory should be sufficient, at least for a single user.
+<BR>
+<BR>
+
+    <LI>LCModel should run with almost any Linux distribution from 2001 or 
+later.  Most popular are Ubuntu, Red Hat & CentOS.
+<BR> <BR>
+
+    <LI>You should check all of this on your own computer with the free
+download and test runs.
+
+</UL>
+<A HREF="#top">Back to top of page</a>
+<HR>
+<br>
+Contact: Stephen Provencher: <A HREF=mailto:sp@lcmodel.CA>sp@lcmodel.CA</A><BR><br>
+
+Last modified: 16 February 2021
+</DIV>
+</BODY>
+</HTML>

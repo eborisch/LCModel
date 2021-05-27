@@ -1,0 +1,11 @@
+#!/bin/sh
+
+#                 .uninstall-lcmodel               (23 November 2011)
+#                 ===================
+#
+# SYNOPSIS
+#     $HOME/.uninstall-lcmodel
+#============================================================================
+
+\rm  -fr  $HOME/.lcmodel
+\rm  -f  $HOME/.uninstall-lcmodel

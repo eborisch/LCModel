@@ -1,0 +1,82 @@
+#!/bin/sh
+
+#                         install-lcmodel     (27 May 2016)
+#                         ===============
+
+# Restricted to Linux 32- or 64-bit
+
+PLATFORM=64
+#============================================================================
+
+if [ $PLATFORM != 32   -a   $PLATFORM != 64 ]
+then
+    echo "
+              >>>>>> Error in install-lcmodel <<<<<<"
+    exit 1
+fi
+
+#                         Installation starts here.
+#
+rm  -f  lcm-$PLATFORM.tar
+
+OLD_DIR=`pwd`
+
+mv  .uninstall-lcmodel  $HOME  2>/dev/null
+
+cd  $HOME
+#-----------------------------------------------------------------------------
+
+# Install LCModel/LCMgui
+#
+echo "
+*** The installation is starting.
+    This typically takes a few minutes. ***"
+
+echo "
+*** LCModel is very fast with Linux.
+    Check the elapsed time output below.
+
+    LCModel should run with most Linux distributions newer than 1997.
+    Otherwise, you quickly get a message like, \"Kernel too old.\"
+ ***"
+
+    xz -d -c  $OLD_DIR/lcm-core.txz  |  tar  xf  -  
+    rm  -f  $OLD_DIR/lcm-core.txz
+#-----------------------------------------------------------------------------
+
+# Delete obsolete files from old installations.
+#
+rm  -f  $HOME/.lcmodel/doc/manual.ps
+rm  -f  $HOME/.lcmodel/gelx/preprocessors/fix-3t-bandwidth
+
+#-----------------------------------------------------------------------------
+
+# Move (from LCMgui V.1 directory) & make profile directory.
+# Tests with "test" and -w and -d options were not used, in case some shells 
+#   are missing these.
+#
+mkdir  -p  $HOME/.lcmodel/profiles/1
+mv  $HOME/.lcmodel/gui-defaults      $HOME/.lcmodel/profiles/1/  2>/dev/null
+mv  $HOME/.lcmodel/control-defaults  $HOME/.lcmodel/profiles/1/  2>/dev/null
+#
+# Signal LCMgui that an installation is being done.
+#
+mkdir  -p  $HOME/.lcmodel/installing
+
+#-----------------------------------------------------------------------------
+
+# Test Runs
+
+# Start LCMgui
+
+cd  $HOME/.lcmodel
+./lcmgui 
+#-----------------------------------------------------------------------------
+
+rm  -f  $OLD_DIR/install-lcmodel
+
+# $HOME/.lcmodel/installing has normally already been removed; suppress error
+#   message.
+#
+rmdir  $HOME/.lcmodel/installing  2>/dev/null
+exit 0
